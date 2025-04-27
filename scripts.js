@@ -18,9 +18,11 @@ function checkTime(i) {
 
 function displayDate(){
     var today = new Date()
-    var month = today.getMonth
-    var day = today.getDay
-    var year = today.getFullYear
+    var month = today.getMonth() + 1
+    var day = today.getDate()
+    var year = today.getFullYear()
+    month = checkTime(month)
+    day = checkTime(day)
     console.log(month + "/" + day + "/" + year)
 }
 
