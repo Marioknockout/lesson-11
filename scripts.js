@@ -16,5 +16,13 @@ function checkTime(i) {
     return i;
 }
 
+function displayDate(){
+    var today = new Date()
+    var month = today.getMonth
+    var day = today.getDay
+    var year = today.getFullYear
+    console.log(month + "/" + day + "/" + year)
+}
+
 
 
