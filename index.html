@@ -41,7 +41,20 @@
 </body>
 
 <script>
+    try {
+        var loadNotes = localStorage.getItem("notes");
+        console.log("so it automatically goes to this for some reason");
+    }
+    catch(err) {
+        var loadNotes = "Enter your notes here and click 'Save'";
+        console.log("clearly it isnt doing this right?");
+    }
+    $("#note-area").val(loadNotes);
 
+    $("#saveNoteBtn").click(function(){
+    var currentNotes = $("#note-area").val();
+    localStorage.setItem("notes", currentNotes);
+   });
 </script>
 </html>
 
